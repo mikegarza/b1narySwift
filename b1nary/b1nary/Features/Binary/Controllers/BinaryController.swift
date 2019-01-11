@@ -32,17 +32,33 @@ class BinaryController: UIViewController {
 	@IBOutlet var clearButton: CalculatorCircleButton!
 	@IBOutlet var pasteButton: CalculatorCircleButton!
 	
+	@IBOutlet var buttonsBackgroundHeightConstraint: NSLayoutConstraint!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		// Put your custom viewDidLoad code here
 	}
 	
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
-		
+
+		calculateBackgroundViewHeight()
 		makeCircleButtons()
+	}
+	
+	/// We want our calculator buttons to be perfectly round circles.
+	/// We calculate the width of the one button first and use that
+	/// to determine the height for the view holding the buttons.
+	func calculateBackgroundViewHeight() {
+		let paddingCount: CGFloat = 5.0
+		let padding: CGFloat = 16.0
+		let horizontalButtonCount: CGFloat = 4.0
+		
+		let buttonsOnlyWidth = view.frame.width - paddingCount * padding
+		let buttonWidth = buttonsOnlyWidth /  horizontalButtonCount
+		let backgroundHeight = (buttonWidth * paddingCount) + (paddingCount * padding)
+		buttonsBackgroundHeightConstraint.constant = backgroundHeight
+		view.setNeedsLayout()
 	}
 	
 	func makeCircleButtons() {
