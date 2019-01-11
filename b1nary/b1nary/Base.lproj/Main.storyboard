@@ -1,24 +1,300 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dtf-cd-dcL">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Item 2-->
+        <scene sceneID="aNg-qw-3rS">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="1tb-74-iBI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XxG-bn-KJZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="IPw-gN-2ZB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="qc3-zg-Xev"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Rf-vA-xNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-441" y="-267"/>
+        </scene>
+        <!--BinaryController-->
+        <scene sceneID="Mxu-y7-xGK">
+            <objects>
+                <viewController storyboardIdentifier="BinaryController" id="tNU-df-gKg" userLabel="BinaryController" customClass="BinaryController" customModule="b1nary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xML-Z2-kYg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cjl-K6-uO8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="178"/>
+                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxf-cb-6K8">
+                                <rect key="frame" x="0.0" y="178" width="320" height="341"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VAr-I5-rK5">
+                                        <rect key="frame" x="16" y="0.0" width="288" height="325"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kpF-ca-BoI">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="52.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiK-Df-j9c" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="52.5"/>
+                                                        <color key="backgroundColor" red="0.1647058874" green="0.63921570780000003" blue="0.57647061349999995" alpha="1" colorSpace="deviceRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="A">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6b9-TN-wZN" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="0.0" width="60" height="52.5"/>
+                                                        <color key="backgroundColor" red="0.1647058874" green="0.63921570780000003" blue="0.57647061349999995" alpha="1" colorSpace="deviceRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="B">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JpU-YI-oZE" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="152" y="0.0" width="60" height="52.5"/>
+                                                        <color key="backgroundColor" red="0.1647058874" green="0.63921570780000003" blue="0.57647061349999995" alpha="1" colorSpace="deviceRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="C">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opA-O7-xWV" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="228" y="0.0" width="60" height="52.5"/>
+                                                        <color key="backgroundColor" red="0.1647058874" green="0.63921570780000003" blue="0.57647061349999995" alpha="1" colorSpace="deviceRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="D">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Z2S-QJ-5dl">
+                                                <rect key="frame" x="0.0" y="68.5" width="288" height="52"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKK-Hd-0EH" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="52"/>
+                                                        <color key="backgroundColor" red="0.10034690409347306" green="0.38864213197969544" blue="0.35215047463531779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="7">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaH-rp-acW" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="0.0" width="60" height="52"/>
+                                                        <color key="backgroundColor" red="0.10034690409347306" green="0.38864213197969544" blue="0.35215047463531779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="8">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaR-A5-lHb" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="152" y="0.0" width="60" height="52"/>
+                                                        <color key="backgroundColor" red="0.10034690409347306" green="0.38864213197969544" blue="0.35215047463531779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adl-P5-IPN" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="228" y="0.0" width="60" height="52"/>
+                                                        <color key="backgroundColor" red="0.1647058874" green="0.63921570780000003" blue="0.57647061349999995" alpha="1" colorSpace="deviceRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="E">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3dg-TV-vJS">
+                                                <rect key="frame" x="0.0" y="136.5" width="288" height="52"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAI-CM-GxL" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="52"/>
+                                                        <color key="backgroundColor" red="0.10034690409347306" green="0.38864213197969544" blue="0.35215047463531779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="4">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDl-fU-5Zs" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="0.0" width="60" height="52"/>
+                                                        <color key="backgroundColor" red="0.10034690409347306" green="0.38864213197969544" blue="0.35215047463531779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXg-Rh-FKo" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="152" y="0.0" width="60" height="52"/>
+                                                        <color key="backgroundColor" red="0.10034690409347306" green="0.38864213197969544" blue="0.35215047463531779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppy-rh-MMz" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="228" y="0.0" width="60" height="52"/>
+                                                        <color key="backgroundColor" red="0.1647058874" green="0.63921570780000003" blue="0.57647061349999995" alpha="1" colorSpace="deviceRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="F">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9fI-mm-AgX">
+                                                <rect key="frame" x="0.0" y="204.5" width="288" height="52.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEo-Z3-7Mg" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="52.5"/>
+                                                        <color key="backgroundColor" red="0.10034690409347306" green="0.38864213197969544" blue="0.35215047463531779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="1">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwK-nY-Nfh" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="0.0" width="60" height="52.5"/>
+                                                        <color key="backgroundColor" red="0.10034690409347306" green="0.38864213197969544" blue="0.35215047463531779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="2">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shH-eQ-Ez6" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="152" y="0.0" width="60" height="52.5"/>
+                                                        <color key="backgroundColor" red="0.10034690409347306" green="0.38864213197969544" blue="0.35215047463531779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="3">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nr-fZ-C7s" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="228" y="0.0" width="60" height="52.5"/>
+                                                        <color key="backgroundColor" red="0.083845606150000002" green="0.32473283980000001" blue="0.29424196260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ysU-sC-Bzk">
+                                                <rect key="frame" x="0.0" y="273" width="288" height="52"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cij-ho-GB5" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="52"/>
+                                                        <color key="backgroundColor" red="0.10034690409347306" green="0.38864213197969544" blue="0.35215047463531779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="0">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pa-6j-2R6" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="0.0" width="60" height="52"/>
+                                                        <color key="backgroundColor" red="0.083845606145132742" green="0.32473283977969536" blue="0.29424196258801089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="DEL">
+                                                            <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQY-gd-U4I" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="152" y="0.0" width="60" height="52"/>
+                                                        <color key="backgroundColor" red="0.083845606145132742" green="0.32473283977969536" blue="0.29424196258801089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="CLR">
+                                                            <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmz-Uv-dtQ" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                                        <rect key="frame" x="228" y="0.0" width="60" height="52"/>
+                                                        <color key="backgroundColor" red="0.083845606150000002" green="0.32473283980000001" blue="0.29424196260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="VAr-I5-rK5" firstAttribute="top" secondItem="kxf-cb-6K8" secondAttribute="top" id="5JW-gb-XCS"/>
+                                    <constraint firstAttribute="trailing" secondItem="VAr-I5-rK5" secondAttribute="trailing" constant="16" id="Ek7-yU-xzo"/>
+                                    <constraint firstItem="VAr-I5-rK5" firstAttribute="leading" secondItem="kxf-cb-6K8" secondAttribute="leading" constant="16" id="o2C-I1-1VS"/>
+                                    <constraint firstAttribute="bottom" secondItem="VAr-I5-rK5" secondAttribute="bottom" constant="16" id="th6-JD-bx7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kxf-cb-6K8" firstAttribute="bottom" secondItem="HzX-Ky-fek" secondAttribute="bottom" id="55s-qD-H9C"/>
+                            <constraint firstItem="HzX-Ky-fek" firstAttribute="trailing" secondItem="Cjl-K6-uO8" secondAttribute="trailing" id="Doe-mR-pvI"/>
+                            <constraint firstItem="kxf-cb-6K8" firstAttribute="top" secondItem="Cjl-K6-uO8" secondAttribute="bottom" id="KD8-sQ-5dz"/>
+                            <constraint firstItem="Cjl-K6-uO8" firstAttribute="top" secondItem="xML-Z2-kYg" secondAttribute="top" id="VYd-xg-Fpb"/>
+                            <constraint firstItem="kxf-cb-6K8" firstAttribute="trailing" secondItem="HzX-Ky-fek" secondAttribute="trailing" id="bPY-1y-URM"/>
+                            <constraint firstItem="kxf-cb-6K8" firstAttribute="leading" secondItem="HzX-Ky-fek" secondAttribute="leading" id="hKX-XZ-E4L"/>
+                            <constraint firstItem="Cjl-K6-uO8" firstAttribute="leading" secondItem="HzX-Ky-fek" secondAttribute="leading" id="sFq-PH-WJz"/>
+                            <constraint firstItem="kxf-cb-6K8" firstAttribute="height" secondItem="xML-Z2-kYg" secondAttribute="height" multiplier="0.6" id="vBJ-gh-LOO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HzX-Ky-fek"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="HmP-cB-Wke"/>
+                    <connections>
+                        <outlet property="aButton" destination="EiK-Df-j9c" id="lWm-yR-7vM"/>
+                        <outlet property="bButton" destination="6b9-TN-wZN" id="rbH-v7-Yuc"/>
+                        <outlet property="cButton" destination="JpU-YI-oZE" id="89B-Nc-PKe"/>
+                        <outlet property="clearButton" destination="eQY-gd-U4I" id="od7-RX-VbF"/>
+                        <outlet property="dButton" destination="opA-O7-xWV" id="TQi-Kc-OQI"/>
+                        <outlet property="deleteButton" destination="2pa-6j-2R6" id="6bf-Mo-Wqe"/>
+                        <outlet property="eButton" destination="Adl-P5-IPN" id="yJr-J5-rqv"/>
+                        <outlet property="eightButton" destination="PaH-rp-acW" id="He7-A7-hyY"/>
+                        <outlet property="fButton" destination="ppy-rh-MMz" id="yvq-zf-MlQ"/>
+                        <outlet property="fiveButton" destination="NDl-fU-5Zs" id="Wqk-uw-MJ0"/>
+                        <outlet property="fourButton" destination="TAI-CM-GxL" id="JvY-7n-ZL5"/>
+                        <outlet property="nineButton" destination="LaR-A5-lHb" id="X9I-fD-5QH"/>
+                        <outlet property="oneButton" destination="kEo-Z3-7Mg" id="4Ga-Ml-g1X"/>
+                        <outlet property="pasteButton" destination="Rmz-Uv-dtQ" id="XY5-1r-hd4"/>
+                        <outlet property="saveButton" destination="9nr-fZ-C7s" id="Kls-fU-HA4"/>
+                        <outlet property="sevenButton" destination="TKK-Hd-0EH" id="vWK-4M-xFX"/>
+                        <outlet property="sixButton" destination="WXg-Rh-FKo" id="RiS-ka-ZAR"/>
+                        <outlet property="threeButton" destination="shH-eQ-Ez6" id="0L3-ix-3fm"/>
+                        <outlet property="twoButton" destination="qwK-nY-Nfh" id="pkS-99-e5m"/>
+                        <outlet property="zeroButton" destination="Cij-ho-GB5" id="c9D-tb-TGm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yBt-fF-iVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-442.5" y="-931.69014084507046"/>
+        </scene>
+        <!--Home Tab Bar Controller-->
+        <scene sceneID="ZPN-HT-lQV">
+            <objects>
+                <tabBarController storyboardIdentifier="HomeTabBarController" id="dtf-cd-dcL" customClass="HomeTabBarController" customModule="b1nary" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qLh-yL-eZ5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="tNU-df-gKg" kind="relationship" relationship="viewControllers" id="YRz-XB-NiD"/>
+                        <segue destination="1tb-74-iBI" kind="relationship" relationship="viewControllers" id="f1f-z2-T8f"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DlS-Np-qoR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1393" y="-600"/>
         </scene>
     </scenes>
 </document>

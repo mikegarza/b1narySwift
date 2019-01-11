@@ -13,6 +13,9 @@
 		27630CE421DF287E00D06DE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27630CE321DF287E00D06DE8 /* Assets.xcassets */; };
 		27630CE721DF287E00D06DE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27630CE521DF287E00D06DE8 /* LaunchScreen.storyboard */; };
 		27630CF221DF287E00D06DE8 /* b1naryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27630CF121DF287E00D06DE8 /* b1naryTests.swift */; };
+		27630D0121DF3C8200D06DE8 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27630D0021DF3C8200D06DE8 /* HomeTabBarController.swift */; };
+		27630D0621DF487400D06DE8 /* BinaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27630D0521DF487400D06DE8 /* BinaryController.swift */; };
+		27630D0921DF607A00D06DE8 /* ButtonSubclasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27630D0821DF607A00D06DE8 /* ButtonSubclasses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		27630CED21DF287E00D06DE8 /* b1naryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = b1naryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27630CF121DF287E00D06DE8 /* b1naryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = b1naryTests.swift; sourceTree = "<group>"; };
 		27630CF321DF287E00D06DE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27630D0021DF3C8200D06DE8 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		27630D0521DF487400D06DE8 /* BinaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryController.swift; sourceTree = "<group>"; };
+		27630D0821DF607A00D06DE8 /* ButtonSubclasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSubclasses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,8 @@
 		27630CDB21DF287B00D06DE8 /* b1nary */ = {
 			isa = PBXGroup;
 			children = (
+				27630CFC21DF392F00D06DE8 /* Features */,
+				27630D0721DF5FAF00D06DE8 /* Generic */,
 				27630CDC21DF287B00D06DE8 /* AppDelegate.swift */,
 				27630CDE21DF287B00D06DE8 /* ViewController.swift */,
 				27630CE021DF287B00D06DE8 /* Main.storyboard */,
@@ -94,6 +102,71 @@
 				27630CF321DF287E00D06DE8 /* Info.plist */,
 			);
 			path = b1naryTests;
+			sourceTree = "<group>";
+		};
+		27630CFC21DF392F00D06DE8 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				27630D0221DF478600D06DE8 /* Binary */,
+				27630CFD21DF398700D06DE8 /* General */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		27630CFD21DF398700D06DE8 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				27630CFE21DF39BE00D06DE8 /* Controllers */,
+				27630CFF21DF39C800D06DE8 /* UI */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		27630CFE21DF39BE00D06DE8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				27630D0021DF3C8200D06DE8 /* HomeTabBarController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		27630CFF21DF39C800D06DE8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		27630D0221DF478600D06DE8 /* Binary */ = {
+			isa = PBXGroup;
+			children = (
+				27630D0321DF480300D06DE8 /* Controllers */,
+				27630D0421DF480B00D06DE8 /* UI */,
+			);
+			path = Binary;
+			sourceTree = "<group>";
+		};
+		27630D0321DF480300D06DE8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				27630D0521DF487400D06DE8 /* BinaryController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		27630D0421DF480B00D06DE8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		27630D0721DF5FAF00D06DE8 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				27630D0821DF607A00D06DE8 /* ButtonSubclasses.swift */,
+			);
+			path = Generic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27630D0921DF607A00D06DE8 /* ButtonSubclasses.swift in Sources */,
 				27630CDF21DF287B00D06DE8 /* ViewController.swift in Sources */,
 				27630CDD21DF287B00D06DE8 /* AppDelegate.swift in Sources */,
+				27630D0621DF487400D06DE8 /* BinaryController.swift in Sources */,
+				27630D0121DF3C8200D06DE8 /* HomeTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
