@@ -8,31 +8,34 @@
 
 import UIKit
 
-class BinaryController: UIViewController {
-	@IBOutlet var aButton: CalculatorCircleButton!
-	@IBOutlet var bButton: CalculatorCircleButton!
-	@IBOutlet var cButton: CalculatorCircleButton!
-	@IBOutlet var dButton: CalculatorCircleButton!
-	@IBOutlet var eButton: CalculatorCircleButton!
-	@IBOutlet var fButton: CalculatorCircleButton!
+class BinaryController : UIViewController {
+	@IBOutlet private var aButton: CalculatorCircleButton!
+	@IBOutlet private var bButton: CalculatorCircleButton!
+	@IBOutlet private var cButton: CalculatorCircleButton!
+	@IBOutlet private var dButton: CalculatorCircleButton!
+	@IBOutlet private var eButton: CalculatorCircleButton!
+	@IBOutlet private var fButton: CalculatorCircleButton!
 	
-	@IBOutlet var zeroButton: CalculatorCircleButton!
-	@IBOutlet var oneButton: CalculatorCircleButton!
-	@IBOutlet var twoButton: CalculatorCircleButton!
-	@IBOutlet var threeButton: CalculatorCircleButton!
-	@IBOutlet var fourButton: CalculatorCircleButton!
-	@IBOutlet var fiveButton: CalculatorCircleButton!
-	@IBOutlet var sixButton: CalculatorCircleButton!
-	@IBOutlet var sevenButton: CalculatorCircleButton!
-	@IBOutlet var eightButton: CalculatorCircleButton!
-	@IBOutlet var nineButton: CalculatorCircleButton!
+	@IBOutlet private var zeroButton: CalculatorCircleButton!
+	@IBOutlet private var oneButton: CalculatorCircleButton!
+	@IBOutlet private var twoButton: CalculatorCircleButton!
+	@IBOutlet private var threeButton: CalculatorCircleButton!
+	@IBOutlet private var fourButton: CalculatorCircleButton!
+	@IBOutlet private var fiveButton: CalculatorCircleButton!
+	@IBOutlet private var sixButton: CalculatorCircleButton!
+	@IBOutlet private var sevenButton: CalculatorCircleButton!
+	@IBOutlet private var eightButton: CalculatorCircleButton!
+	@IBOutlet private var nineButton: CalculatorCircleButton!
 	
-	@IBOutlet var saveButton: CalculatorCircleButton!
-	@IBOutlet var deleteButton: CalculatorCircleButton!
-	@IBOutlet var clearButton: CalculatorCircleButton!
-	@IBOutlet var pasteButton: CalculatorCircleButton!
+	@IBOutlet private var saveButton: CalculatorCircleButton!
+	@IBOutlet private var deleteButton: CalculatorCircleButton!
+	@IBOutlet private var clearButton: CalculatorCircleButton!
+	@IBOutlet private var pasteButton: CalculatorCircleButton!
 	
-	@IBOutlet var buttonsBackgroundHeightConstraint: NSLayoutConstraint!
+	@IBOutlet private var binaryNumberLabel: UILabel!
+	@IBOutlet private var buttonsBackgroundHeightConstraint: NSLayoutConstraint!
+	
+	private var currentBinaryString: String? = nil
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -53,7 +56,7 @@ class BinaryController: UIViewController {
 		let paddingCount: CGFloat = 5.0
 		let padding: CGFloat = 16.0
 		let horizontalButtonCount: CGFloat = 4.0
-		
+
 		let buttonsOnlyWidth = view.frame.width - paddingCount * padding
 		let buttonWidth = buttonsOnlyWidth /  horizontalButtonCount
 		let backgroundHeight = (buttonWidth * paddingCount) + (paddingCount * padding)
@@ -82,5 +85,48 @@ class BinaryController: UIViewController {
 		deleteButton.makeACircle()
 		clearButton.makeACircle()
 		pasteButton.makeACircle()
+	}
+	
+	private func binaryDigitPressed(_ buttonTitle: String?) {
+		guard let digitString = buttonTitle else { return }
+		
+		if let currentString = currentBinaryString {
+			if currentString.count >= 32 {
+				return
+			}
+			
+			currentBinaryString = currentString + digitString
+		} else {
+			currentBinaryString = digitString
+		}
+		
+		binaryNumberLabel.text = currentBinaryString
+	}
+	
+	// MARK: IBActions
+	
+	@IBAction func digitPressed(_ sender: CalculatorCircleButton) {
+		binaryDigitPressed(sender.currentTitle)
+	}
+	
+	@IBAction func deleteButtonPressed(_ sender: CalculatorCircleButton) {
+		guard var currentString = currentBinaryString else { return }
+		guard !currentString.isEmpty else { return }
+
+		_ = currentString.removeLast()
+		currentBinaryString = currentString
+		
+		if currentString.isEmpty {
+			binaryNumberLabel.text = "Enter A Binary Number"
+		} else {
+			binaryNumberLabel.text = currentString
+		}
+		// Here is a one line version of the if-statement above
+		// binaryNumberLabel.text = currentString.isEmpty ? "Enter A Binary Number" : currentString
+	}
+
+	@IBAction func clearButtonPressed(_ sender: CalculatorCircleButton) {
+		currentBinaryString = nil
+		binaryNumberLabel.text = "Enter A Binary Number"
 	}
 }
