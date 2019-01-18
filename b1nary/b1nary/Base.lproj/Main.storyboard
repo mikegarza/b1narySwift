@@ -319,12 +319,14 @@
                         <outlet property="cButton" destination="JpU-YI-oZE" id="89B-Nc-PKe"/>
                         <outlet property="clearButton" destination="eQY-gd-U4I" id="od7-RX-VbF"/>
                         <outlet property="dButton" destination="opA-O7-xWV" id="TQi-Kc-OQI"/>
+                        <outlet property="decimalNumberLabel" destination="bSD-eO-AWQ" id="hD4-6P-nf3"/>
                         <outlet property="deleteButton" destination="2pa-6j-2R6" id="6bf-Mo-Wqe"/>
                         <outlet property="eButton" destination="Adl-P5-IPN" id="yJr-J5-rqv"/>
                         <outlet property="eightButton" destination="PaH-rp-acW" id="He7-A7-hyY"/>
                         <outlet property="fButton" destination="ppy-rh-MMz" id="yvq-zf-MlQ"/>
                         <outlet property="fiveButton" destination="NDl-fU-5Zs" id="Wqk-uw-MJ0"/>
                         <outlet property="fourButton" destination="TAI-CM-GxL" id="JvY-7n-ZL5"/>
+                        <outlet property="hexadecimalNumberLabel" destination="44f-2p-fPy" id="lH6-1k-jeh"/>
                         <outlet property="nineButton" destination="LaR-A5-lHb" id="X9I-fD-5QH"/>
                         <outlet property="oneButton" destination="kEo-Z3-7Mg" id="4Ga-Ml-g1X"/>
                         <outlet property="pasteButton" destination="Rmz-Uv-dtQ" id="XY5-1r-hd4"/>

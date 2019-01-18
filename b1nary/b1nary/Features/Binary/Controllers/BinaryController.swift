@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BinaryController : UIViewController {
+class BinaryController: UIViewController {
 	@IBOutlet private var aButton: CalculatorCircleButton!
 	@IBOutlet private var bButton: CalculatorCircleButton!
 	@IBOutlet private var cButton: CalculatorCircleButton!
@@ -33,6 +33,8 @@ class BinaryController : UIViewController {
 	@IBOutlet private var pasteButton: CalculatorCircleButton!
 	
 	@IBOutlet private var binaryNumberLabel: UILabel!
+	@IBOutlet private var decimalNumberLabel: UILabel!
+	@IBOutlet private var hexadecimalNumberLabel: UILabel!
 	@IBOutlet private var buttonsBackgroundHeightConstraint: NSLayoutConstraint!
 	
 	private var currentBinaryString: String? = nil
@@ -58,7 +60,7 @@ class BinaryController : UIViewController {
 		let horizontalButtonCount: CGFloat = 4.0
 
 		let buttonsOnlyWidth = view.frame.width - paddingCount * padding
-		let buttonWidth = buttonsOnlyWidth /  horizontalButtonCount
+		let buttonWidth = buttonsOnlyWidth / horizontalButtonCount
 		let backgroundHeight = (buttonWidth * paddingCount) + (paddingCount * padding)
 		buttonsBackgroundHeightConstraint.constant = backgroundHeight
 		view.setNeedsLayout()
@@ -95,9 +97,14 @@ class BinaryController : UIViewController {
 				return
 			}
 			
-			currentBinaryString = currentString + digitString
+			let newBinaryString = currentString + digitString
+			currentBinaryString = newBinaryString
+			decimalNumberLabel.text = ConversionMath.binaryToDecimal(newBinaryString)
+			hexadecimalNumberLabel.text = ConversionMath.binaryToHexadecimal(newBinaryString)
 		} else {
 			currentBinaryString = digitString
+			decimalNumberLabel.text = ConversionMath.binaryToDecimal(digitString)
+			hexadecimalNumberLabel.text = ConversionMath.binaryToHexadecimal(digitString)
 		}
 		
 		binaryNumberLabel.text = currentBinaryString
