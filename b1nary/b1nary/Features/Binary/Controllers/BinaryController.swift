@@ -42,6 +42,7 @@ class BinaryController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		resetAllLabels()
 	}
 	
 	override func viewDidLayoutSubviews() {
@@ -99,15 +100,24 @@ class BinaryController: UIViewController {
 			
 			let newBinaryString = currentString + digitString
 			currentBinaryString = newBinaryString
-			decimalNumberLabel.text = ConversionMath.binaryToDecimal(newBinaryString)
-			hexadecimalNumberLabel.text = ConversionMath.binaryToHexadecimal(newBinaryString)
+			convertAndUpdateLabels(newBinaryString)
 		} else {
 			currentBinaryString = digitString
-			decimalNumberLabel.text = ConversionMath.binaryToDecimal(digitString)
-			hexadecimalNumberLabel.text = ConversionMath.binaryToHexadecimal(digitString)
+			convertAndUpdateLabels(digitString)
 		}
 		
 		binaryNumberLabel.text = currentBinaryString
+	}
+	
+	private func convertAndUpdateLabels(_ binaryNumber: String) {
+		decimalNumberLabel.text = ConversionMath.binaryToDecimal(binaryNumber)
+		hexadecimalNumberLabel.text = ConversionMath.binaryToHexadecimal(binaryNumber)
+	}
+	
+	private func resetAllLabels() {
+		binaryNumberLabel.text = "Enter A Binary Number"
+		decimalNumberLabel.text = ""
+		hexadecimalNumberLabel.text = ""
 	}
 	
 	// MARK: IBActions
@@ -124,9 +134,10 @@ class BinaryController: UIViewController {
 		currentBinaryString = currentString
 		
 		if currentString.isEmpty {
-			binaryNumberLabel.text = "Enter A Binary Number"
+			resetAllLabels()
 		} else {
 			binaryNumberLabel.text = currentString
+			convertAndUpdateLabels(currentString)
 		}
 		// Here is a one line version of the if-statement above
 		// binaryNumberLabel.text = currentString.isEmpty ? "Enter A Binary Number" : currentString
@@ -134,6 +145,6 @@ class BinaryController: UIViewController {
 
 	@IBAction func clearButtonPressed(_ sender: CalculatorCircleButton) {
 		currentBinaryString = nil
-		binaryNumberLabel.text = "Enter A Binary Number"
+		resetAllLabels()
 	}
 }
