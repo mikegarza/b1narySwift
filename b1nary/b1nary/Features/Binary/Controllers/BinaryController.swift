@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BinaryController : UIViewController {
+class BinaryController: UIViewController {
 	@IBOutlet private var aButton: CalculatorCircleButton!
 	@IBOutlet private var bButton: CalculatorCircleButton!
 	@IBOutlet private var cButton: CalculatorCircleButton!
@@ -33,6 +33,8 @@ class BinaryController : UIViewController {
 	@IBOutlet private var pasteButton: CalculatorCircleButton!
 	
 	@IBOutlet private var binaryNumberLabel: UILabel!
+	@IBOutlet private var decimalNumberLabel: UILabel!
+	@IBOutlet private var hexadecimalNumberLabel: UILabel!
 	@IBOutlet private var buttonsBackgroundHeightConstraint: NSLayoutConstraint!
 	
 	private var currentBinaryString: String? = nil
@@ -40,6 +42,7 @@ class BinaryController : UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		resetAllLabels()
 	}
 	
 	override func viewDidLayoutSubviews() {
@@ -58,7 +61,7 @@ class BinaryController : UIViewController {
 		let horizontalButtonCount: CGFloat = 4.0
 
 		let buttonsOnlyWidth = view.frame.width - paddingCount * padding
-		let buttonWidth = buttonsOnlyWidth /  horizontalButtonCount
+		let buttonWidth = buttonsOnlyWidth / horizontalButtonCount
 		let backgroundHeight = (buttonWidth * paddingCount) + (paddingCount * padding)
 		buttonsBackgroundHeightConstraint.constant = backgroundHeight
 		view.setNeedsLayout()
@@ -95,12 +98,26 @@ class BinaryController : UIViewController {
 				return
 			}
 			
-			currentBinaryString = currentString + digitString
+			let newBinaryString = currentString + digitString
+			currentBinaryString = newBinaryString
+			convertAndUpdateLabels(newBinaryString)
 		} else {
 			currentBinaryString = digitString
+			convertAndUpdateLabels(digitString)
 		}
 		
 		binaryNumberLabel.text = currentBinaryString
+	}
+	
+	private func convertAndUpdateLabels(_ binaryNumber: String) {
+		decimalNumberLabel.text = ConversionMath.binaryToDecimal(binaryNumber)
+		hexadecimalNumberLabel.text = ConversionMath.binaryToHexadecimal(binaryNumber)
+	}
+	
+	private func resetAllLabels() {
+		binaryNumberLabel.text = "Enter A Binary Number"
+		decimalNumberLabel.text = ""
+		hexadecimalNumberLabel.text = ""
 	}
 	
 	// MARK: IBActions
@@ -117,9 +134,10 @@ class BinaryController : UIViewController {
 		currentBinaryString = currentString
 		
 		if currentString.isEmpty {
-			binaryNumberLabel.text = "Enter A Binary Number"
+			resetAllLabels()
 		} else {
 			binaryNumberLabel.text = currentString
+			convertAndUpdateLabels(currentString)
 		}
 		// Here is a one line version of the if-statement above
 		// binaryNumberLabel.text = currentString.isEmpty ? "Enter A Binary Number" : currentString
@@ -127,6 +145,6 @@ class BinaryController : UIViewController {
 
 	@IBAction func clearButtonPressed(_ sender: CalculatorCircleButton) {
 		currentBinaryString = nil
-		binaryNumberLabel.text = "Enter A Binary Number"
+		resetAllLabels()
 	}
 }
