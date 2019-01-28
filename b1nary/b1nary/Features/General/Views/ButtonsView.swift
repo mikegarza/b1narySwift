@@ -1,0 +1,96 @@
+//
+//  ButtonsView.swift
+//  b1nary
+//
+//  Created by Michael Garza on 1/27/19.
+//  Copyright © 2019 Michael Garza. All rights reserved.
+//
+
+import UIKit
+
+class ButtonsView: UIView {
+	@IBOutlet private var aButton: CalculatorCircleButton!
+	@IBOutlet private var bButton: CalculatorCircleButton!
+	@IBOutlet private var cButton: CalculatorCircleButton!
+	@IBOutlet private var dButton: CalculatorCircleButton!
+	@IBOutlet private var eButton: CalculatorCircleButton!
+	@IBOutlet private var fButton: CalculatorCircleButton!
+	
+	@IBOutlet private var zeroButton: CalculatorCircleButton!
+	@IBOutlet private var oneButton: CalculatorCircleButton!
+	@IBOutlet private var twoButton: CalculatorCircleButton!
+	@IBOutlet private var threeButton: CalculatorCircleButton!
+	@IBOutlet private var fourButton: CalculatorCircleButton!
+	@IBOutlet private var fiveButton: CalculatorCircleButton!
+	@IBOutlet private var sixButton: CalculatorCircleButton!
+	@IBOutlet private var sevenButton: CalculatorCircleButton!
+	@IBOutlet private var eightButton: CalculatorCircleButton!
+	@IBOutlet private var nineButton: CalculatorCircleButton!
+	
+	@IBOutlet private var saveButton: CalculatorCircleButton!
+	@IBOutlet private var deleteButton: CalculatorCircleButton!
+	@IBOutlet private var clearButton: CalculatorCircleButton!
+	@IBOutlet private var pasteButton: CalculatorCircleButton!
+	
+	weak var delegate: ButtonsViewDelegate?
+
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		
+		makeCircleButtons()
+	}
+	
+	/// We want our calculator buttons to be perfectly round circles.
+	/// We calculate the width of the one button first and use that
+	/// to determine the height for the view holding the buttons.
+	func calculateBackgroundViewHeight(_ viewWidth: CGFloat) -> CGFloat {
+		let paddingCount: CGFloat = 5.0
+		let padding: CGFloat = 16.0
+		let horizontalButtonCount: CGFloat = 4.0
+		
+		let buttonsOnlyWidth = viewWidth - paddingCount * padding
+		let buttonWidth = buttonsOnlyWidth / horizontalButtonCount
+		let backgroundHeight = (buttonWidth * paddingCount) + (paddingCount * padding)
+		return backgroundHeight
+	}
+	
+	func makeCircleButtons() {
+		aButton.makeACircle()
+		bButton.makeACircle()
+		cButton.makeACircle()
+		dButton.makeACircle()
+		eButton.makeACircle()
+		fButton.makeACircle()
+		zeroButton.makeACircle()
+		oneButton.makeACircle()
+		twoButton.makeACircle()
+		threeButton.makeACircle()
+		fourButton.makeACircle()
+		fiveButton.makeACircle()
+		sixButton.makeACircle()
+		sevenButton.makeACircle()
+		eightButton.makeACircle()
+		nineButton.makeACircle()
+		saveButton.makeACircle()
+		deleteButton.makeACircle()
+		clearButton.makeACircle()
+		pasteButton.makeACircle()
+	}
+	
+	// MARK: IBActions
+	
+	@IBAction func digitPressed(_ sender: CalculatorCircleButton) {
+		if let digit = sender.currentTitle {
+			delegate?.digitPressed(digit)
+		}
+	}
+	
+	@IBAction func deleteButtonPressed(_ sender: CalculatorCircleButton) {
+		delegate?.deletePressed()
+	}
+	
+	@IBAction func clearButtonPressed(_ sender: CalculatorCircleButton) {
+		delegate?.clearPressed()
+	}
+
+}

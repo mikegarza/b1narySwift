@@ -1,14 +1,14 @@
 //
-//  BinaryController.swift
+//  DecimalController.swift
 //  b1nary
 //
-//  Created by Michael Garza on 1/3/19.
+//  Created by Michael Garza on 1/27/19.
 //  Copyright © 2019 Michael Garza. All rights reserved.
 //
 
 import UIKit
 
-class BinaryController: UIViewController {	
+class DecimalController: UIViewController {
 	@IBOutlet private var buttonsContainerView: UIView!
 	@IBOutlet private var binaryNumberLabel: UILabel!
 	@IBOutlet private var decimalNumberLabel: UILabel!
@@ -16,8 +16,8 @@ class BinaryController: UIViewController {
 	@IBOutlet private var buttonsBackgroundHeightConstraint: NSLayoutConstraint!
 	private var buttonsView: ButtonsView!
 	
-	private var currentBinaryString: String? = nil
-	
+	private var currentDecimalString: String? = nil
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -30,60 +30,59 @@ class BinaryController: UIViewController {
 	
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
-
+		
 		buttonsBackgroundHeightConstraint.constant = buttonsView.calculateBackgroundViewHeight(view.bounds.width)
 		view.setNeedsLayout()
 		buttonsView.makeCircleButtons()
 	}
-	
-	
-	private func binaryDigitPressed(_ buttonTitle: String?) {
+
+	private func decimalDigitPressed(_ buttonTitle: String?) {
 		guard let digitString = buttonTitle else { return }
 		
-		if let currentString = currentBinaryString {
-			if currentString.count >= 32 {
-				return
-			}
-			
-			let newBinaryString = currentString + digitString
-			currentBinaryString = newBinaryString
-			convertAndUpdateLabels(newBinaryString)
-		} else {
-			currentBinaryString = digitString
-			convertAndUpdateLabels(digitString)
-		}
+//		if let currentString = currentDecimalString {
+//			if currentString.count >= 32 {
+//				return
+//			}
+//
+//			let newBinaryString = currentString + digitString
+//			currentBinaryString = newBinaryString
+//			convertAndUpdateLabels(newBinaryString)
+//		} else {
+//			currentBinaryString = digitString
+//			convertAndUpdateLabels(digitString)
+//		}
 		
-		binaryNumberLabel.text = currentBinaryString
+		decimalNumberLabel.text = currentDecimalString
 	}
 	
 	private func convertAndUpdateLabels(_ binaryNumber: String) {
 		decimalNumberLabel.text = ConversionMath.binaryToDecimal(binaryNumber)
 		hexadecimalNumberLabel.text = ConversionMath.binaryToHexadecimal(binaryNumber)
 	}
-	
+
 	private func resetAllLabels() {
-		binaryNumberLabel.text = "Enter A Binary Number"
-		decimalNumberLabel.text = ""
+		decimalNumberLabel.text = "Enter A Decimal Number"
+		binaryNumberLabel.text = ""
 		hexadecimalNumberLabel.text = ""
 	}
 }
 
-extension BinaryController: ButtonsViewDelegate {
+extension DecimalController: ButtonsViewDelegate {
 	func digitPressed(_ digit: String) {
-		binaryDigitPressed(digit)
+		decimalDigitPressed(digit)
 	}
 	
 	func deletePressed() {
-		guard var currentString = currentBinaryString else { return }
+		guard var currentString = currentDecimalString else { return }
 		guard !currentString.isEmpty else { return }
 		
 		_ = currentString.removeLast()
-		currentBinaryString = currentString
+		currentDecimalString = currentString
 		
 		if currentString.isEmpty {
 			resetAllLabels()
 		} else {
-			binaryNumberLabel.text = currentString
+			decimalNumberLabel.text = currentString
 			convertAndUpdateLabels(currentString)
 		}
 		// Here is a one line version of the if-statement above
@@ -91,7 +90,8 @@ extension BinaryController: ButtonsViewDelegate {
 	}
 	
 	func clearPressed() {
-		currentBinaryString = nil
+		currentDecimalString = nil
 		resetAllLabels()
 	}
 }
+

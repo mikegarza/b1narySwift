@@ -17,6 +17,10 @@
 		27630D0121DF3C8200D06DE8 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27630D0021DF3C8200D06DE8 /* HomeTabBarController.swift */; };
 		27630D0621DF487400D06DE8 /* BinaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27630D0521DF487400D06DE8 /* BinaryController.swift */; };
 		27630D0921DF607A00D06DE8 /* ButtonSubclasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27630D0821DF607A00D06DE8 /* ButtonSubclasses.swift */; };
+		27966EFA21FE931200A437FD /* DecimalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27966EF921FE931200A437FD /* DecimalController.swift */; };
+		27966EFC21FE962700A437FD /* ButtonsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27966EFB21FE962700A437FD /* ButtonsView.xib */; };
+		27966EFF21FE985000A437FD /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27966EFE21FE985000A437FD /* ButtonsView.swift */; };
+		27966F0121FEA14F00A437FD /* ViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27966F0021FEA14F00A437FD /* ViewProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		27630D0021DF3C8200D06DE8 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		27630D0521DF487400D06DE8 /* BinaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryController.swift; sourceTree = "<group>"; };
 		27630D0821DF607A00D06DE8 /* ButtonSubclasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSubclasses.swift; sourceTree = "<group>"; };
+		27966EF921FE931200A437FD /* DecimalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalController.swift; sourceTree = "<group>"; };
+		27966EFB21FE962700A437FD /* ButtonsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsView.xib; sourceTree = "<group>"; };
+		27966EFE21FE985000A437FD /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		27966F0021FEA14F00A437FD /* ViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				27630D0221DF478600D06DE8 /* Binary */,
+				27966EF721FE92A800A437FD /* Decimal */,
 				27630CFD21DF398700D06DE8 /* General */,
 				2751ED2821F18A6200FD4122 /* Math */,
 			);
@@ -128,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				27630CFE21DF39BE00D06DE8 /* Controllers */,
+				27966EFD21FE983E00A437FD /* Views */,
 				27630CFF21DF39C800D06DE8 /* UI */,
 			);
 			path = General;
@@ -144,6 +154,7 @@
 		27630CFF21DF39C800D06DE8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				27966EFB21FE962700A437FD /* ButtonsView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -176,8 +187,33 @@
 			isa = PBXGroup;
 			children = (
 				27630D0821DF607A00D06DE8 /* ButtonSubclasses.swift */,
+				27966F0021FEA14F00A437FD /* ViewProtocols.swift */,
 			);
 			path = Generic;
+			sourceTree = "<group>";
+		};
+		27966EF721FE92A800A437FD /* Decimal */ = {
+			isa = PBXGroup;
+			children = (
+				27966EF821FE92C500A437FD /* Controllers */,
+			);
+			path = Decimal;
+			sourceTree = "<group>";
+		};
+		27966EF821FE92C500A437FD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				27966EF921FE931200A437FD /* DecimalController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		27966EFD21FE983E00A437FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				27966EFE21FE985000A437FD /* ButtonsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +299,7 @@
 			files = (
 				27630CE721DF287E00D06DE8 /* LaunchScreen.storyboard in Resources */,
 				27630CE421DF287E00D06DE8 /* Assets.xcassets in Resources */,
+				27966EFC21FE962700A437FD /* ButtonsView.xib in Resources */,
 				27630CE221DF287B00D06DE8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,11 +318,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27966EFA21FE931200A437FD /* DecimalController.swift in Sources */,
 				27630D0921DF607A00D06DE8 /* ButtonSubclasses.swift in Sources */,
 				2751ED2A21F18AA800FD4122 /* ConversionMath.swift in Sources */,
 				27630CDF21DF287B00D06DE8 /* ViewController.swift in Sources */,
 				27630CDD21DF287B00D06DE8 /* AppDelegate.swift in Sources */,
 				27630D0621DF487400D06DE8 /* BinaryController.swift in Sources */,
+				27966EFF21FE985000A437FD /* ButtonsView.swift in Sources */,
+				27966F0121FEA14F00A437FD /* ViewProtocols.swift in Sources */,
 				27630D0121DF3C8200D06DE8 /* HomeTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
