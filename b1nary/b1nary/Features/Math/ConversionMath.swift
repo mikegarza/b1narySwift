@@ -92,4 +92,63 @@ class ConversionMath {
 		
 		return hexadecimalString
 	}
+	
+	func decimalToBinary(_ decimalNumber: String) -> String {
+		guard var currentDecimal = Int64(decimalNumber) else { return "ERROR" }
+		guard currentDecimal != 0 else { return "0"}
+		
+		var binaryString = ""
+
+		while currentDecimal != 0 {
+			let remainder = currentDecimal % 2
+			currentDecimal /= 2
+			
+			if remainder == 0 {
+				binaryString.insert("0", at: binaryString.startIndex)
+			} else {
+				binaryString.insert("1", at: binaryString.startIndex)
+			}
+		}
+		
+		return binaryString
+	}
+	
+	func decimalToHexadecimal(_ decimalNumber: String) -> String {
+		guard var currentDecimal = Int64(decimalNumber) else { return "ERROR" }
+		guard currentDecimal != 0 else { return "0"}
+		
+		var hexadecimalString = ""
+
+		while currentDecimal > 0 {
+			let remainder = currentDecimal % 16
+			currentDecimal /= 16
+			
+			if remainder < 10 {
+				if let string = String(remainder).first {
+					hexadecimalString.insert(string, at: hexadecimalString.startIndex)
+				} else {
+					return "ERROR"
+				}
+			} else {
+				switch remainder {
+					case 10:
+						hexadecimalString.insert("A", at: hexadecimalString.startIndex)
+					case 11:
+						hexadecimalString.insert("B", at: hexadecimalString.startIndex)
+					case 12:
+						hexadecimalString.insert("C", at: hexadecimalString.startIndex)
+					case 13:
+						hexadecimalString.insert("D", at: hexadecimalString.startIndex)
+					case 14:
+						hexadecimalString.insert("E", at: hexadecimalString.startIndex)
+					case 15:
+						hexadecimalString.insert("F", at: hexadecimalString.startIndex)
+					default:
+						return "ERROR"
+				}
+			}
+		}
+		
+		return hexadecimalString
+	}
 }
