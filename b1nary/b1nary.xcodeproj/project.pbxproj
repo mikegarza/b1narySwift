@@ -21,6 +21,7 @@
 		27966EFC21FE962700A437FD /* ButtonsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27966EFB21FE962700A437FD /* ButtonsView.xib */; };
 		27966EFF21FE985000A437FD /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27966EFE21FE985000A437FD /* ButtonsView.swift */; };
 		27966F0121FEA14F00A437FD /* ViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27966F0021FEA14F00A437FD /* ViewProtocols.swift */; };
+		27966F05220D5B4E00A437FD /* HexadecimalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27966F04220D5B4E00A437FD /* HexadecimalController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		27966EFB21FE962700A437FD /* ButtonsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsView.xib; sourceTree = "<group>"; };
 		27966EFE21FE985000A437FD /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		27966F0021FEA14F00A437FD /* ViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocols.swift; sourceTree = "<group>"; };
+		27966F04220D5B4E00A437FD /* HexadecimalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexadecimalController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				27630D0221DF478600D06DE8 /* Binary */,
 				27966EF721FE92A800A437FD /* Decimal */,
+				27966F02220D5AC400A437FD /* Hexadecimal */,
 				27630CFD21DF398700D06DE8 /* General */,
 				2751ED2821F18A6200FD4122 /* Math */,
 			);
@@ -214,6 +217,22 @@
 				27966EFE21FE985000A437FD /* ButtonsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		27966F02220D5AC400A437FD /* Hexadecimal */ = {
+			isa = PBXGroup;
+			children = (
+				27966F03220D5AE900A437FD /* Controllers */,
+			);
+			path = Hexadecimal;
+			sourceTree = "<group>";
+		};
+		27966F03220D5AE900A437FD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				27966F04220D5B4E00A437FD /* HexadecimalController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +340,7 @@
 				27966EFA21FE931200A437FD /* DecimalController.swift in Sources */,
 				27630D0921DF607A00D06DE8 /* ButtonSubclasses.swift in Sources */,
 				2751ED2A21F18AA800FD4122 /* ConversionMath.swift in Sources */,
+				27966F05220D5B4E00A437FD /* HexadecimalController.swift in Sources */,
 				27630CDF21DF287B00D06DE8 /* ViewController.swift in Sources */,
 				27630CDD21DF287B00D06DE8 /* AppDelegate.swift in Sources */,
 				27630D0621DF487400D06DE8 /* BinaryController.swift in Sources */,

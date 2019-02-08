@@ -13,6 +13,10 @@ class ConversionMath {
 		return binaryNumber.trimmingCharacters(in: CharacterSet(charactersIn: "01").inverted)
 	}
 	
+	private class func hexadecimalDigitsOnly(_ hexadecimalNumber: String) -> String {
+		return hexadecimalNumber.trimmingCharacters(in: CharacterSet(charactersIn: "0123456789ABCDEF").inverted)
+	}
+	
 	private class func removeLeadingZeros(_ binaryNumber: String) -> String {
 		// TODO: Give this one a try
 		// Remove all leading zeros since they do not add any value to the binary number
@@ -93,7 +97,7 @@ class ConversionMath {
 		return hexadecimalString
 	}
 	
-	func decimalToBinary(_ decimalNumber: String) -> String {
+	class func decimalToBinary(_ decimalNumber: String) -> String {
 		guard var currentDecimal = Int64(decimalNumber) else { return "ERROR" }
 		guard currentDecimal != 0 else { return "0"}
 		
@@ -113,7 +117,7 @@ class ConversionMath {
 		return binaryString
 	}
 	
-	func decimalToHexadecimal(_ decimalNumber: String) -> String {
+	class func decimalToHexadecimal(_ decimalNumber: String) -> String {
 		guard var currentDecimal = Int64(decimalNumber) else { return "ERROR" }
 		guard currentDecimal != 0 else { return "0"}
 		
@@ -150,5 +154,67 @@ class ConversionMath {
 		}
 		
 		return hexadecimalString
+	}
+	
+	class func hexadecimalToBinary(_ hexadecimalNumber: String) -> String {
+		guard hexadecimalNumber.count > 0 else { return "0" }
+		
+		var hexStringIn = hexadecimalDigitsOnly(hexadecimalNumber.uppercased())
+		var count = hexStringIn.count
+		var convertedString = ""
+		
+		while count > 0 {
+			let firstDigit = hexStringIn.removeFirst()
+			
+			switch firstDigit {
+				case "0":
+					convertedString.append("0000")
+				case "1":
+					convertedString.append("0001")
+				case "2":
+					convertedString.append("0010")
+				case "3":
+					convertedString.append("0011")
+				case "4":
+					convertedString.append("0100")
+				case "5":
+					convertedString.append("0101")
+				case "6":
+					convertedString.append("0110")
+				case "7":
+					convertedString.append("0111")
+				case "8":
+					convertedString.append("1000")
+				case "9":
+					convertedString.append("1001")
+				case "A":
+					convertedString.append("1010")
+				case "B":
+					convertedString.append("1011")
+				case "C":
+					convertedString.append("1100")
+				case "D":
+					convertedString.append("1101")
+				case "E":
+					convertedString.append("1110")
+				case "F":
+					convertedString.append("1111")
+				default:
+					return "ERROR"
+			}
+			
+			count -= 1
+		}
+		
+		while convertedString.count > 1 && convertedString.first == "0" {
+			convertedString.removeFirst()
+		}
+		
+		return convertedString
+	}
+	
+	class func hexadecimalToDecimal(_ hexadecimalNumber: String) -> String {
+		
+		return ""
 	}
 }

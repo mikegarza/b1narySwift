@@ -1,98 +1,94 @@
 //
-//  BinaryController.swift
+//  HexadecimalController.swift
 //  b1nary
 //
-//  Created by Michael Garza on 1/3/19.
+//  Created by Michael Garza on 2/7/19.
 //  Copyright © 2019 Michael Garza. All rights reserved.
 //
 
 import UIKit
 
-class BinaryController: UIViewController {	
+class HexadecimalController: UIViewController {
 	@IBOutlet private var buttonsContainerView: UIView!
 	@IBOutlet private var binaryNumberLabel: UILabel!
 	@IBOutlet private var decimalNumberLabel: UILabel!
 	@IBOutlet private var hexadecimalNumberLabel: UILabel!
 	@IBOutlet private var buttonsBackgroundHeightConstraint: NSLayoutConstraint!
+	
 	private var buttonsView: ButtonsView!
-	
-	private var currentBinaryString: String? = nil
-	
+	private var currentHexadecimalString: String? = nil
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		buttonsView = (Bundle.main.loadNibNamed("ButtonsView", owner: nil, options: nil)!.first as! ButtonsView)
 		buttonsContainerView.addSubview(buttonsView)
-		buttonsView.style = .binary
+		buttonsView.style = .hexadecimal
 		buttonsView.delegate = self
-
+		
 		resetAllLabels()
 	}
 	
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
-
+		
 		buttonsBackgroundHeightConstraint.constant = buttonsView.calculateBackgroundViewHeight(view.bounds.width)
 		view.setNeedsLayout()
 		buttonsView.makeCircleButtons()
 	}
-	
-	
-	private func binaryDigitPressed(_ buttonTitle: String?) {
+
+	private func hexadecimalDigitPressed(_ buttonTitle: String?) {
 		guard let digitString = buttonTitle else { return }
 		
-		if let currentString = currentBinaryString {
-			if currentString.count >= 32 {
-				return
-			}
+		if let currentString = currentHexadecimalString {
+			let newHexadecimalString = currentString + digitString
+			guard newHexadecimalString.count <= 8 else { return }
 			
-			let newBinaryString = currentString + digitString
-			currentBinaryString = newBinaryString
-			convertAndUpdateLabels(newBinaryString)
+			currentHexadecimalString = newHexadecimalString
+			convertAndUpdateLabels(newHexadecimalString)
 		} else {
-			currentBinaryString = digitString
+			currentHexadecimalString = digitString
 			convertAndUpdateLabels(digitString)
 		}
 		
-		binaryNumberLabel.text = currentBinaryString
+		hexadecimalNumberLabel.text = currentHexadecimalString
 	}
 	
-	private func convertAndUpdateLabels(_ binaryNumber: String) {
-		decimalNumberLabel.text = ConversionMath.binaryToDecimal(binaryNumber)
-		hexadecimalNumberLabel.text = ConversionMath.binaryToHexadecimal(binaryNumber)
+	private func convertAndUpdateLabels(_ hexadecimalNumber: String) {
+		binaryNumberLabel.text = ConversionMath.hexadecimalToBinary(hexadecimalNumber)
+		decimalNumberLabel.text = ConversionMath.hexadecimalToDecimal(hexadecimalNumber)
 	}
-	
+
 	private func resetAllLabels() {
-		binaryNumberLabel.text = "Enter A Binary Number"
+		hexadecimalNumberLabel.text = "Enter A Hexadecimal Number"
 		decimalNumberLabel.text = ""
-		hexadecimalNumberLabel.text = ""
+		binaryNumberLabel.text = ""
 	}
 }
 
-extension BinaryController: ButtonsViewDelegate {
+extension HexadecimalController: ButtonsViewDelegate {
 	func digitPressed(_ digit: String) {
-		binaryDigitPressed(digit)
+		hexadecimalDigitPressed(digit)
 	}
 	
 	func deletePressed() {
-		guard var currentString = currentBinaryString else { return }
+		guard var currentString = currentHexadecimalString else { return }
 		guard !currentString.isEmpty else { return }
 		
 		_ = currentString.removeLast()
-		currentBinaryString = currentString
+		currentHexadecimalString = currentString
 		
 		if currentString.isEmpty {
 			resetAllLabels()
 		} else {
-			binaryNumberLabel.text = currentString
+			hexadecimalNumberLabel.text = currentString
 			convertAndUpdateLabels(currentString)
 		}
-		// Here is a one line version of the if-statement above
-		// binaryNumberLabel.text = currentString.isEmpty ? "Enter A Binary Number" : currentString
 	}
 	
 	func clearPressed() {
-		currentBinaryString = nil
+		currentHexadecimalString = nil
 		resetAllLabels()
 	}
 }
+

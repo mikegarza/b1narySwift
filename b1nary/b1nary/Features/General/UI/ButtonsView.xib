@@ -32,6 +32,9 @@
                                             <state key="normal" title="A">
                                                 <color key="titleColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="digitPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="zS9-Ih-xQB"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtE-zd-MxF" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
                                             <rect key="frame" x="90" y="0.0" width="73.5" height="60"/>
@@ -40,6 +43,9 @@
                                             <state key="normal" title="B">
                                                 <color key="titleColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="digitPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="O70-Sq-7e0"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pC5-XB-l2J" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
                                             <rect key="frame" x="179.5" y="0.0" width="74" height="60"/>
@@ -48,6 +54,9 @@
                                             <state key="normal" title="C">
                                                 <color key="titleColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="digitPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="BcT-hA-FuT"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wci-gc-cfx" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
                                             <rect key="frame" x="269.5" y="0.0" width="73.5" height="60"/>
@@ -56,6 +65,9 @@
                                             <state key="normal" title="D">
                                                 <color key="titleColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="digitPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="PM7-TD-G5F"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -69,6 +81,9 @@
                                             <state key="normal" title="7">
                                                 <color key="titleColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="digitPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="fUW-BI-1qr"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IT4-tE-72f" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
                                             <rect key="frame" x="90" y="0.0" width="73.5" height="60"/>
@@ -77,6 +92,9 @@
                                             <state key="normal" title="8">
                                                 <color key="titleColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="digitPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="a5U-8C-yVP"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtG-e9-7Yl" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
                                             <rect key="frame" x="179.5" y="0.0" width="74" height="60"/>
@@ -85,6 +103,9 @@
                                             <state key="normal" title="9">
                                                 <color key="titleColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="digitPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="gGk-LF-kuQ"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNy-13-yd1" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
                                             <rect key="frame" x="269.5" y="0.0" width="73.5" height="60"/>
@@ -93,6 +114,9 @@
                                             <state key="normal" title="E">
                                                 <color key="titleColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="digitPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="c0N-IU-FgC"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -106,6 +130,9 @@
                                             <state key="normal" title="4">
                                                 <color key="titleColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="digitPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="htC-aR-bg1"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVy-BG-Sne" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
                                             <rect key="frame" x="90" y="0.0" width="73.5" height="60"/>
@@ -114,6 +141,9 @@
                                             <state key="normal" title="5">
                                                 <color key="titleColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="digitPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="kVh-cm-yd4"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sw-y6-3Vg" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
                                             <rect key="frame" x="179.5" y="0.0" width="74" height="60"/>
@@ -122,6 +152,9 @@
                                             <state key="normal" title="6">
                                                 <color key="titleColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="digitPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="2u9-Is-rWi"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L55-MA-cx2" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
                                             <rect key="frame" x="269.5" y="0.0" width="73.5" height="60"/>
@@ -130,18 +163,21 @@
                                             <state key="normal" title="F">
                                                 <color key="titleColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="digitPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="jE1-J5-2R8"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bk9-bh-mgB">
                                     <rect key="frame" x="0.0" y="228" width="343" height="60"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tei-Tc-4wu" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tei-Tc-4wu" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="74" height="60"/>
                                             <color key="backgroundColor" red="0.1003469041" green="0.38864213199999997" blue="0.35215047459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                             <state key="normal" title="1">
-                                                <color key="titleColor" red="0.1974687413" green="0.21893273490000001" blue="0.21893273490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="titleColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>
                                                 <action selector="digitPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="EXx-o2-YKA"/>
@@ -154,6 +190,9 @@
                                             <state key="normal" title="2">
                                                 <color key="titleColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="digitPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="vy4-pO-rKL"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rch-Aq-8bJ" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
                                             <rect key="frame" x="179.5" y="0.0" width="74" height="60"/>
@@ -162,8 +201,11 @@
                                             <state key="normal" title="3">
                                                 <color key="titleColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="digitPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="ded-t1-bg5"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcO-Xi-AUM" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcO-Xi-AUM" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
                                             <rect key="frame" x="269.5" y="0.0" width="73.5" height="60"/>
                                             <color key="backgroundColor" red="0.083845606150000002" green="0.32473283980000001" blue="0.29424196260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
@@ -174,7 +216,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qcV-Hm-88T">
                                     <rect key="frame" x="0.0" y="304" width="343" height="60"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJz-SS-7gr" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJz-SS-7gr" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="74" height="60"/>
                                             <color key="backgroundColor" red="0.1003469041" green="0.38864213199999997" blue="0.35215047459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
@@ -185,7 +227,7 @@
                                                 <action selector="digitPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="l9a-Oy-byQ"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWK-la-94L" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWK-la-94L" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
                                             <rect key="frame" x="90" y="0.0" width="73.5" height="60"/>
                                             <color key="backgroundColor" red="0.083845606150000002" green="0.32473283980000001" blue="0.29424196260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
@@ -196,7 +238,7 @@
                                                 <action selector="deleteButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="aBH-VJ-ai7"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9h-R2-Mpk" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9h-R2-Mpk" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
                                             <rect key="frame" x="179.5" y="0.0" width="74" height="60"/>
                                             <color key="backgroundColor" red="0.083845606150000002" green="0.32473283980000001" blue="0.29424196260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
@@ -207,7 +249,7 @@
                                                 <action selector="clearButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="jut-ns-MLm"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rz-r3-dUr" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rz-r3-dUr" customClass="CalculatorCircleButton" customModule="b1nary" customModuleProvider="target">
                                             <rect key="frame" x="269.5" y="0.0" width="73.5" height="60"/>
                                             <color key="backgroundColor" red="0.083845606150000002" green="0.32473283980000001" blue="0.29424196260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>

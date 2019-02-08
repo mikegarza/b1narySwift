@@ -9,6 +9,12 @@
 import UIKit
 
 class ButtonsView: UIView {
+	enum ButtonsViewStyle {
+		case binary
+		case decimal
+		case hexadecimal
+	}
+	
 	@IBOutlet private var aButton: CalculatorCircleButton!
 	@IBOutlet private var bButton: CalculatorCircleButton!
 	@IBOutlet private var cButton: CalculatorCircleButton!
@@ -33,6 +39,10 @@ class ButtonsView: UIView {
 	@IBOutlet private var pasteButton: CalculatorCircleButton!
 	
 	weak var delegate: ButtonsViewDelegate?
+	var style: ButtonsViewStyle = .binary
+	
+	private let buttonGray = UIColor(red: 54.0/255.0, green: 54.0/255.0, blue: 54.0/255.0, alpha: 1.0)
+	private let buttonWhite = UIColor(red: 212.0/255.0, green: 212.0/255.0, blue: 212.0/255.0, alpha: 1.0)
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
@@ -75,8 +85,36 @@ class ButtonsView: UIView {
 		deleteButton.makeACircle()
 		clearButton.makeACircle()
 		pasteButton.makeACircle()
+		
+		setupButtons()
+	}
+	private func setupButtons() {
+		switch style {
+			case .hexadecimal:
+				enableButtons([aButton, bButton, cButton, dButton, eButton, fButton])
+				fallthrough
+			case .decimal:
+				enableButtons([nineButton, eightButton, sevenButton, sixButton, fiveButton, fourButton, threeButton, twoButton])
+				fallthrough
+			case .binary:
+				enableButtons([oneButton, zeroButton, deleteButton, clearButton])
+		}
+	}
+
+	private func enableButtons(_ buttons: [CalculatorCircleButton]) {
+		for button in buttons {
+			button.isEnabled = true
+			button.setTitleColor(buttonGray, for: .normal)
+		}
 	}
 	
+	private func disableButtons(_ buttons: [CalculatorCircleButton]) {
+		for button in buttons {
+			button.isEnabled = false
+			button.setTitleColor(buttonWhite, for: .normal)
+		}
+	}
+
 	// MARK: IBActions
 	
 	@IBAction func digitPressed(_ sender: CalculatorCircleButton) {

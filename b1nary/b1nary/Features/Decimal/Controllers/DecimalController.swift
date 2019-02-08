@@ -14,8 +14,8 @@ class DecimalController: UIViewController {
 	@IBOutlet private var decimalNumberLabel: UILabel!
 	@IBOutlet private var hexadecimalNumberLabel: UILabel!
 	@IBOutlet private var buttonsBackgroundHeightConstraint: NSLayoutConstraint!
-	private var buttonsView: ButtonsView!
 	
+	private var buttonsView: ButtonsView!
 	private var currentDecimalString: String? = nil
 
 	override func viewDidLoad() {
@@ -23,6 +23,7 @@ class DecimalController: UIViewController {
 		
 		buttonsView = (Bundle.main.loadNibNamed("ButtonsView", owner: nil, options: nil)!.first as! ButtonsView)
 		buttonsContainerView.addSubview(buttonsView)
+		buttonsView.style = .decimal
 		buttonsView.delegate = self
 
 		resetAllLabels()
@@ -39,25 +40,23 @@ class DecimalController: UIViewController {
 	private func decimalDigitPressed(_ buttonTitle: String?) {
 		guard let digitString = buttonTitle else { return }
 		
-//		if let currentString = currentDecimalString {
-//			if currentString.count >= 32 {
-//				return
-//			}
-//
-//			let newBinaryString = currentString + digitString
-//			currentBinaryString = newBinaryString
-//			convertAndUpdateLabels(newBinaryString)
-//		} else {
-//			currentBinaryString = digitString
-//			convertAndUpdateLabels(digitString)
-//		}
+		if let currentString = currentDecimalString {
+			let newDecimalString = currentString + digitString
+			guard let newDecimalValue = Int64(newDecimalString), newDecimalValue <= 4294967295 else { return }
+
+			currentDecimalString = newDecimalString
+			convertAndUpdateLabels(newDecimalString)
+		} else {
+			currentDecimalString = digitString
+			convertAndUpdateLabels(digitString)
+		}
 		
 		decimalNumberLabel.text = currentDecimalString
 	}
 	
-	private func convertAndUpdateLabels(_ binaryNumber: String) {
-		decimalNumberLabel.text = ConversionMath.binaryToDecimal(binaryNumber)
-		hexadecimalNumberLabel.text = ConversionMath.binaryToHexadecimal(binaryNumber)
+	private func convertAndUpdateLabels(_ decimalNumber: String) {
+		binaryNumberLabel.text = ConversionMath.decimalToBinary(decimalNumber)
+		hexadecimalNumberLabel.text = ConversionMath.decimalToHexadecimal(decimalNumber)
 	}
 
 	private func resetAllLabels() {
