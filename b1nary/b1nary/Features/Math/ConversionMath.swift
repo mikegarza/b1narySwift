@@ -214,7 +214,39 @@ class ConversionMath {
 	}
 	
 	class func hexadecimalToDecimal(_ hexadecimalNumber: String) -> String {
+		guard hexadecimalNumber.count > 0 else { return "0" }
+
+		var hexStringIn = hexadecimalDigitsOnly(hexadecimalNumber.uppercased())
+		var count = hexStringIn.count
+		let base = 16.0
+		var exponent = Double(count - 1)
+		var total: Int64 = 0
 		
-		return ""
+		while count > 0 {
+			let letter = hexStringIn.removeFirst()
+			let power = pow(base, exponent)
+			
+			switch letter {
+				case "A":
+					total += Int64(power * 10)
+				case "B":
+					total += Int64(power * 11)
+				case "C":
+					total += Int64(power * 12)
+				case "D":
+					total += Int64(power * 13)
+				case "E":
+					total += Int64(power * 14)
+				case "F":
+					total += Int64(power * 15)
+				default:
+					total += Int64(String(letter))! * Int64(power)
+			}
+			
+			count -= 1
+			exponent -= 1
+		}
+		
+		return String(total)
 	}
 }

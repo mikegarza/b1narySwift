@@ -41,9 +41,6 @@ class ButtonsView: UIView {
 	weak var delegate: ButtonsViewDelegate?
 	var style: ButtonsViewStyle = .binary
 	
-	private let buttonGray = UIColor(red: 54.0/255.0, green: 54.0/255.0, blue: 54.0/255.0, alpha: 1.0)
-	private let buttonWhite = UIColor(red: 212.0/255.0, green: 212.0/255.0, blue: 212.0/255.0, alpha: 1.0)
-
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		
@@ -104,14 +101,14 @@ class ButtonsView: UIView {
 	private func enableButtons(_ buttons: [CalculatorCircleButton]) {
 		for button in buttons {
 			button.isEnabled = true
-			button.setTitleColor(buttonGray, for: .normal)
+			button.setTitleColor(UIColor(named: "darkGrayColor"), for: .normal)
 		}
 	}
 	
 	private func disableButtons(_ buttons: [CalculatorCircleButton]) {
 		for button in buttons {
 			button.isEnabled = false
-			button.setTitleColor(buttonWhite, for: .normal)
+			button.setTitleColor(UIColor(named: "textColor"), for: .normal)
 		}
 	}
 
